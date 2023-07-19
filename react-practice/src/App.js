@@ -6,8 +6,7 @@ import Boton from './components/button/button';
 import { useState, useEffect } from 'react';
 import Lista from './components/Lista/Lista';
 import Menu from './components/Menu/Menu';
-import createBrowserRouter from 'react-router-dom';
-import RouterProvider from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 function App() {
 
@@ -49,20 +48,20 @@ function App() {
 
 
   const [time, setTime] = useState(0);
-  const RouterProvider =
 
 
 
-    useEffect(() => {
 
-      const cronometroId = setInterval(() => {
-        setTime(time + 1);
-        document.title = "count:" + time
-      }, 1000);
+  useEffect(() => {
 
-      return () => { clearInterval(cronometroId) }
+    const cronometroId = setInterval(() => {
+      setTime(time + 1);
+      document.title = "count:" + time
+    }, 1000);
 
-    }, [time])
+    return () => { clearInterval(cronometroId) }
+
+  }, [time])
 
 
   useEffect(() => {
@@ -104,7 +103,6 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
 
         <RouterProvider router={router}></RouterProvider>
-
         <div>{ImagenMichis(estaEnCaja)}</div>
 
 
