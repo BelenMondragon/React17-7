@@ -1,0 +1,10 @@
+.btn-signin{
+    background-color: dimgrey;
+    height: 40px;
+    width: 150px;
+}
+.btn-signout{
+    background-color: brown;
+    height: 40px;
+    width: 150px;
+}
