@@ -1,0 +1,9 @@
+.btn-caja {
+    height: 20px;
+    width: 80px;
+    background-color: brown;
+}
+
+.btn-caja:hover{
+    background-color: aqua;
+}
